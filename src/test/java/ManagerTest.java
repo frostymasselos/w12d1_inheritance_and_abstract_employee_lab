@@ -33,6 +33,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void canChangeName__StringEntered() {
+        manager1.setName("Richard");
+        assertEquals("Richard", manager1.getName());
+    }
+
+    @Test
     public void canRaiseSalary__PositiveNumberInputted(){
         manager1.raiseSalary(10.50);
         assertEquals(110.5, manager1.getSalary(), 0.01);
@@ -40,7 +46,7 @@ public class ManagerTest {
 
     public void canRaiseSalary__NegativeNumberInputted(){
         manager1.raiseSalary(-20.50);
-        assertEquals(120.5, manager1.getSalary());
+        assertEquals(120.5, manager1.getSalary(), 0.01);
     }
 
     @Test

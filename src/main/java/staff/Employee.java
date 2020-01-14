@@ -23,6 +23,8 @@ public abstract class Employee {
         return salary;
     }
 
+    public void setName(String name){ this.name = name; }
+
     public double raiseSalary(double increment_value) {
         return salary += Math.abs(increment_value);
     }
