@@ -24,7 +24,7 @@ public abstract class Employee {
     }
 
     public double raiseSalary(double increment_value) {
-        return salary += increment_value; //might break - it did!
+        return salary += Math.abs(increment_value);
     }
 
     public double payBonus(){

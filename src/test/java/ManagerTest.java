@@ -33,9 +33,14 @@ public class ManagerTest {
     }
 
     @Test
-    public void canRaiseSalary(){
+    public void canRaiseSalary__PositiveNumberInputted(){
         manager1.raiseSalary(10.50);
         assertEquals(110.5, manager1.getSalary(), 0.01);
+    }
+
+    public void canRaiseSalary__NegativeNumberInputted(){
+        manager1.raiseSalary(-20.50);
+        assertEquals(120.5, manager1.getSalary());
     }
 
     @Test
